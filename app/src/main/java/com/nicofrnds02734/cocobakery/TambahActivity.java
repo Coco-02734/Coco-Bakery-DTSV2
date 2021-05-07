@@ -23,17 +23,18 @@ public class TambahActivity extends AppCompatActivity {
         harga = findViewById(R.id.harga);
         btn_tambah = findViewById(R.id.btn_tambah);
 
-        String nama = nama_produk.getText().toString();
-        String hargas = harga.getText().toString();
+
 
         db = new DataHalperProduk(this);
         btn_tambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                db.TambahData(new DataModelProduk(null, nama, hargas));
-//                Toast.makeText(TambahActivity.this, "Data Kue "+ nama+" Disimpan", Toast.LENGTH_SHORT).show();
-//                ProdukActivity.pa.tampilData();
-//                finish();
+                        String nama = nama_produk.getText().toString();
+        String hargas = harga.getText().toString();
+               db.TambahData(new DataModelProduk(null, nama, hargas));
+               Toast.makeText(TambahActivity.this, "Data Kue "+ nama+" Disimpan", Toast.LENGTH_SHORT).show();
+               ProdukActivity.pa.tampilData();
+               finish();
                 Toast.makeText(TambahActivity.this, nama + " " + hargas, Toast.LENGTH_SHORT).show();
             }
         });
