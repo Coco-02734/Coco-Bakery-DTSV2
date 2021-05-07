@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormTransaksiActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardstatus"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/gmbralamat"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/ic_pin"
+                    android:layout_alignParentLeft="true" />
+                <TextView
+                    android:id="@+id/alamatjudul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/gmbralamat"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="5dp"
+                    android:text="Alamat Pengiriman "/>
+                <LinearLayout
+                    android:id="@+id/fromalamat"
+                    android:layout_below="@id/alamatjudul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/formplus"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/alamat"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="Contoh : Jl Mana aja ya..."
+                        android:inputType="text"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textSize="16sp"
+                        android:importantForAutofill="no"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pesanan"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/cardstatus"
+            android:layout_marginBottom="3dp"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+                <TextView
+                    android:id="@+id/notrans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="No Pesanan : WM0231233"/>
+                <ImageView
+                    android:id="@+id/gmbrmenu"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/notrans"
+                    android:src="@color/orange"/>
+                <TextView
+                    android:id="@+id/namamenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Menu"
+                    android:layout_below="@+id/notrans"
+                    android:fontFamily="@font/roboto"
+                    android:layout_toRightOf="@+id/gmbrmenu"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="16sp"
+                    android:textColor="#000"/>
+                <TextView
+                    android:id="@+id/harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/namamenu"
+                    android:text="Rp 18.500"
+                    android:fontFamily="@font/roboto"
+                    android:layout_toRightOf="@+id/gmbrmenu"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/txtsubtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gmbrmenu"
+                    android:text="Subtotal Produk"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="13sp"/>
+                <TextView
+                    android:id="@+id/totalharga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gmbrmenu"
+                    android:text="Rp 250.000"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/totalongkir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/totalharga"
+                    android:text="Rp 0"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="13sp"/>
+                <TextView
+                    android:id="@+id/txtnama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/totalongkir"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginBottom="8dp"
+                    android:text="Nama Pemesan"/>
+                <LinearLayout
+                    android:id="@+id/fromnama"
+                    android:layout_below="@id/txtnama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/formplus"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/nama"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textSize="16sp"
+                        android:importantForAutofill="no"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/txtcatatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fromnama"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginBottom="8dp"
+                    android:text="Catatan"/>
+                <LinearLayout
+                    android:id="@+id/fromcatatan"
+                    android:layout_below="@id/txtcatatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/formplus"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/catatan"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textSize="16sp"
+                        android:importantForAutofill="no"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_konfirbayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="#fff"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/roboto"
+            android:layout_below="@id/pesanan"
+            android:layout_marginBottom="20dp"
+            android:text="Beli"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>

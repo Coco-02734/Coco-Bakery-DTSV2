@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminActivity">
+    <TextView
+        android:id="@+id/textjdl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Halaman Admin"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/textjdl">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/produk"
+            android:layout_marginBottom="10dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="14dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_transaksi"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Produk"
+                    android:textSize="15sp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/transaksi"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="14dp"
+            android:layout_toRightOf="@+id/produk"
+            android:layout_marginLeft="30dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_transaksi"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Tambah Obat"
+                    android:textSize="15sp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
